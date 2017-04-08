@@ -1,0 +1,1 @@
+# jsdo-static-contents
