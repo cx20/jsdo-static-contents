@@ -1,0 +1,576 @@
+{
+    "asset": {
+        "generator": "COLLADA2GLTF",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "nodes": [
+                1,
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "skin": 0
+        },
+        {
+            "children": [
+                7,
+                2
+            ],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.0,
+                1.0
+            ]
+        },
+        {
+            "children": [
+                3
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                -8.979318677493353e-11,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                8.979318677493353e-11,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "children": [
+                4
+            ],
+            "matrix": [
+                4.4896641959724089e-11,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                4.4896641959724089e-11,
+                0.0,
+                2.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "children": [
+                5
+            ],
+            "rotation": [
+                -0.0,
+                -0.0,
+                -0.6464399099349976,
+                -0.7629649043083191
+            ]
+        },
+        {
+            "children": [
+                6
+            ],
+            "rotation": [
+                -0.0,
+                -0.0,
+                -0.0,
+                -1.0
+            ]
+        },
+        {
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "children": [
+                8
+            ],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "children": [
+                9
+            ],
+            "rotation": [
+                -0.0,
+                -0.6647958159446716,
+                -0.0,
+                -0.7470251321792603
+            ],
+            "scale": [
+                0.9999999403953552,
+                1.0,
+                0.9999999403953552
+            ]
+        },
+        {
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 1,
+                        "NORMAL": 2,
+                        "POSITION": 3,
+                        "WEIGHTS_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ],
+            "name": "pPlaneShape1"
+        }
+    ],
+    "animations": [
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 8,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 5,
+                    "interpolation": "LINEAR",
+                    "output": 6
+                }
+            ]
+        },
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 4,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 7,
+                    "interpolation": "LINEAR",
+                    "output": 8
+                }
+            ]
+        },
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 5,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 9,
+                    "interpolation": "LINEAR",
+                    "output": 10
+                }
+            ]
+        }
+    ],
+    "skins": [
+        {
+            "inverseBindMatrices": 11,
+            "skeleton": 1,
+            "joints": [
+                1,
+                8,
+                9,
+                2,
+                5,
+                6
+            ],
+            "name": "pPlaneShape1-skin"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 42,
+            "max": [
+                17
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 18,
+            "max": [
+                0,
+                3,
+                4,
+                5
+            ],
+            "min": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "min": [
+                0.0,
+                0.9999999403953552,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 216,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                2.5,
+                0.0,
+                -0.5
+            ],
+            "min": [
+                -2.5,
+                0.0,
+                -2.5
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                0.8854395151138306,
+                0.7917115092277527,
+                0.6659563183784485,
+                0.48878660798072817
+            ],
+            "min": [
+                0.001065491931512952,
+                0.01948988065123558,
+                0.00601535988971591,
+                0.0016933080041781068
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2,
+            "max": [
+                1.0
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2,
+            "max": [
+                0.0,
+                0.7071067690849304,
+                0.0,
+                -0.7071067690849304
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 8,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                1.0
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 32,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                0.0,
+                0.0,
+                0.7071067690849304,
+                -0.7071067690849304
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 36,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                1.0
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 144,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                -0.0,
+                -0.0,
+                -0.0,
+                -1.0
+            ],
+            "min": [
+                -0.0,
+                -0.0,
+                -0.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6,
+            "max": [
+                1.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                2.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                -1.0,
+                0.0,
+                -2.0,
+                0.0,
+                -1.0,
+                1.0
+            ],
+            "type": "MAT4"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "lambert1-fx"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 1568,
+            "byteLength": 84,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1360,
+            "byteLength": 144,
+            "byteStride": 8,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 928,
+            "byteLength": 432,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 640,
+            "byteLength": 288,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1504,
+            "byteLength": 64
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 384,
+            "byteLength": 256
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 384
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1652,
+            "uri": "EmaSimpleSkin0.bin"
+        }
+    ]
+}
