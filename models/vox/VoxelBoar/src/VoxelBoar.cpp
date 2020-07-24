@@ -1,5 +1,5 @@
 // File : VoxelBoar.cpp
-// Comple : cl VoxelBoar.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl VoxelBoar.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

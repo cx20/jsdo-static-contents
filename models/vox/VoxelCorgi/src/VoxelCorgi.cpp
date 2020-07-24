@@ -1,5 +1,5 @@
 // File : VoxelCorgi.cpp
-// Comple : cl VoxelCorgi.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl VoxelCorgi.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

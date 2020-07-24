@@ -1,5 +1,5 @@
 // File : Halloween.cpp
-// Comple : cl Halloween.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl Halloween.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

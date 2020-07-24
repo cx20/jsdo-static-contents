@@ -1,5 +1,5 @@
 // File : Ieyasukun.cpp
-// Comple : cl Ieyasukun.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl Ieyasukun.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

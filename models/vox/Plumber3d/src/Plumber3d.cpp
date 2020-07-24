@@ -1,5 +1,5 @@
 // File : Plumber3d.cpp
-// Comple : cl Plumber3d.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl Plumber3d.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>
