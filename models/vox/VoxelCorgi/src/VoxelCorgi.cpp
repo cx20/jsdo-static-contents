@@ -293,7 +293,6 @@ int main( int argc, char* argv[] ) {
 
 int getColorIndex(const char* colorName) {
 	map<string, int> keyValue;
-	//keyValue["BK"] = 52;  // black
 	keyValue["BK"] = 254; // black
 	keyValue["WH"] = 246; // white
 	keyValue["BG"] = 8;   // beige

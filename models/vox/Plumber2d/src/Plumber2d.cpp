@@ -14,22 +14,22 @@ using namespace std;
 #endif
 
 string dataSet[16][16] = {
-    { "BK","BK","BK","BK","BK","BK","BK","BK","BK","BK","BK","BK","BK","BG","BG","BG" },
-    { "BK","BK","BK","BK","BK","BK","RD","RD","RD","RD","RD","BK","BK","BG","BG","BG" },
-    { "BK","BK","BK","BK","BK","RD","RD","RD","RD","RD","RD","RD","RD","RD","BG","BG" },
-    { "BK","BK","BK","BK","BK","BR","BR","BR","BG","BG","BR","BG","BK","RD","RD","RD" },
-    { "BK","BK","BK","BK","BR","BG","BR","BG","BG","BG","BR","BG","BG","RD","RD","RD" },
-    { "BK","BK","BK","BK","BR","BG","BR","BR","BG","BG","BG","BR","BG","BG","BG","RD" },
-    { "BK","BK","BK","BK","BR","BR","BG","BG","BG","BG","BR","BR","BR","BR","RD","BK" },
-    { "BK","BK","BK","BK","BK","BK","BG","BG","BG","BG","BG","BG","BG","RD","BK","BK" },
-    { "BK","BK","RD","RD","RD","RD","RD","BL","RD","RD","RD","BL","RD","BK","BK","BK" },
-    { "BK","RD","RD","RD","RD","RD","RD","RD","BL","RD","RD","RD","BL","BK","BK","BR" },
-    { "BG","BG","RD","RD","RD","RD","RD","RD","BL","BL","BL","BL","BL","BK","BK","BR" },
-    { "BG","BG","BG","BK","BL","BL","RD","BL","BL","YL","BL","BL","YL","BL","BR","BR" },
-    { "BK","BG","BK","BR","BL","BL","BL","BL","BL","BL","BL","BL","BL","BL","BR","BR" },
-    { "BK","BK","BR","BR","BR","BL","BL","BL","BL","BL","BL","BL","BL","BL","BR","BR" },
-    { "BK","BR","BR","BR","BL","BL","BL","BL","BL","BL","BL","BK","BK","BK","BK","BK" },
-    { "BK","BR","BK","BK","BL","BL","BL","BL","BK","BK","BK","BK","BK","BK","BK","BK" }
+    { "--","--","--","--","--","--","--","--","--","--","--","--","--","BG","BG","BG" },
+    { "--","--","--","--","--","--","RD","RD","RD","RD","RD","--","--","BG","BG","BG" },
+    { "--","--","--","--","--","RD","RD","RD","RD","RD","RD","RD","RD","RD","BG","BG" },
+    { "--","--","--","--","--","BR","BR","BR","BG","BG","BR","BG","--","RD","RD","RD" },
+    { "--","--","--","--","BR","BG","BR","BG","BG","BG","BR","BG","BG","RD","RD","RD" },
+    { "--","--","--","--","BR","BG","BR","BR","BG","BG","BG","BR","BG","BG","BG","RD" },
+    { "--","--","--","--","BR","BR","BG","BG","BG","BG","BR","BR","BR","BR","RD","--" },
+    { "--","--","--","--","--","--","BG","BG","BG","BG","BG","BG","BG","RD","--","--" },
+    { "--","--","RD","RD","RD","RD","RD","BL","RD","RD","RD","BL","RD","--","--","--" },
+    { "--","RD","RD","RD","RD","RD","RD","RD","BL","RD","RD","RD","BL","--","--","BR" },
+    { "BG","BG","RD","RD","RD","RD","RD","RD","BL","BL","BL","BL","BL","--","--","BR" },
+    { "BG","BG","BG","--","BL","BL","RD","BL","BL","YL","BL","BL","YL","BL","BR","BR" },
+    { "--","BG","--","BR","BL","BL","BL","BL","BL","BL","BL","BL","BL","BL","BR","BR" },
+    { "--","--","BR","BR","BR","BL","BL","BL","BL","BL","BL","BL","BL","BL","BR","BR" },
+    { "--","BR","BR","BR","BL","BL","BL","BL","BL","BL","BL","--","--","--","--","--" },
+    { "--","BR","--","--","BL","BL","BL","BL","--","--","--","--","--","--","--","--" }
 };
 
 vector<BYTE> colorPalette = {
@@ -164,8 +164,9 @@ int main( int argc, char* argv[] ) {
 
 int getColorIndex(const char* colorName) {
 	map<string, int> keyValue;
-	keyValue["BK"] = 52;  // black
-	keyValue["BG"] = 8;   // beige
+	keyValue["BK"] = 254; // black
+	keyValue["WH"] = 246; // white
+	keyValue["BG"] = 9;   // beige
 	keyValue["BR"] = 96;  // brown
 	keyValue["RD"] = 216; // red
 	keyValue["YL"] = 5;   // yellow
@@ -195,7 +196,7 @@ void addModelData(vector<BYTE>& byteArray) {
 	for ( int y = 0; y < 16; y++ ) {
 		for ( int x = 0; x < 16; x++ ) {
 			string colorName = dataSet[y][x];
-			if ( colorName != "BK" ) {
+			if ( colorName != "--" ) {
 				BYTE colorIndex = (BYTE)getColorIndex(colorName.c_str());
 				byteArray.push_back( x );
 				byteArray.push_back( 8 );
