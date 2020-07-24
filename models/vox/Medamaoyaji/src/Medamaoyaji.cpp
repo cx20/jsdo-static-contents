@@ -1,5 +1,5 @@
 // File : Medamaoyaji.cpp
-// Comple : cl Medamaoyaji.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl Medamaoyaji.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

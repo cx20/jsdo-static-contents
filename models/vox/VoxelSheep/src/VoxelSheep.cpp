@@ -1,5 +1,5 @@
 // File : VoxelSheep.cpp
-// Comple : cl VoxelSheep.cpp /EHsc (for Visual C++ 2019)
+// Compile : cl VoxelSheep.cpp /EHsc (for Visual C++ 2019)
 
 #include <string>
 #include <vector>

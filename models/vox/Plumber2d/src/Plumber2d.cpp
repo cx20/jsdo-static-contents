@@ -1,5 +1,5 @@
 // File : genMarioVox.cpp
-// Comple : cl genMarioVox.cpp /EHsc (for VS2019)
+// Compile : cl genMarioVox.cpp /EHsc (for VS2019)
 
 #include <string>
 #include <vector>
