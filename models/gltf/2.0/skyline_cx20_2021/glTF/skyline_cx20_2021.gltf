@@ -1,0 +1,119 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.33",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_clearcoat"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "skyline_cx20_2021",
+            "scale" : [
+                0.05000000074505806,
+                0.05000000074505806,
+                0.05000000074505806
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_clearcoat" : {
+                    "clearcoatFactor" : 0.15000000596046448,
+                    "clearcoatRoughnessFactor" : 0.029999999329447746
+                }
+            },
+            "name" : "material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.13571441173553467,
+                    0.13676506280899048,
+                    0.13413164019584656,
+                    1
+                ],
+                "metallicFactor" : 0.6583333015441895,
+                "roughnessFactor" : 0.22499999403953552
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "skyline_cx20_2021",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 18491,
+            "max" : [
+                75.17963409423828,
+                29.69999885559082,
+                15.83023452758789
+            ],
+            "min" : [
+                -74.9084243774414,
+                -4.486087799072266,
+                -14.471185684204102
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 18491,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 24105,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 221892,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 221892,
+            "byteOffset" : 221892
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48210,
+            "byteOffset" : 443784
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 491996,
+            "uri" : "skyline_cx20_2021.bin"
+        }
+    ]
+}
