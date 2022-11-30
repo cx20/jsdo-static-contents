@@ -1,0 +1,493 @@
+{
+    "asset": {
+        "generator": "COLLADA2GLTF, added extensions by hand",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "children": [
+                2,
+                1
+            ],
+            "matrix": [
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.009999999776482582,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        {
+            "matrix": [
+                -0.7289686799049377,
+                0.0,
+                -0.6845470666885376,
+                0.0,
+                -0.4252049028873444,
+                0.7836934328079224,
+                0.4527972936630249,
+                0.0,
+                0.5364750623703003,
+                0.6211478114128113,
+                -0.571287989616394,
+                0.0,
+                400.1130065917969,
+                463.2640075683594,
+                -431.0780334472656,
+                1.0
+            ],
+            "camera": 0
+        },
+        {
+            "mesh": 0
+        }
+    ],
+    "cameras": [
+        {
+            "perspective": {
+                "aspectRatio": 1.5,
+                "yfov": 0.6605925559997559,
+                "zfar": 10000.0,
+                "znear": 1.0
+            },
+            "type": "perspective"
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TEXCOORD_0": 3
+                    },
+                    "extensions": {
+                      "KHR_materials_variants": {
+                        "mappings": [
+                          {
+                            "material": 0,
+                            "variants": [
+                              0
+                            ]
+                          },
+                          {
+                            "material": 1,
+                            "variants": [
+                              1
+                            ]
+                          },
+                          {
+                            "material": 2,
+                            "variants": [
+                              2
+                            ]
+                          },
+                          {
+                            "material": 3,
+                            "variants": [
+                              3
+                            ]
+                          },
+                          {
+                            "material": 4,
+                            "variants": [
+                              4
+                            ]
+                          },
+                          {
+                            "material": 5,
+                            "variants": [
+                              5
+                            ]
+                          },
+                          {
+                            "material": 6,
+                            "variants": [
+                              6
+                            ]
+                          },
+                          {
+                            "material": 7,
+                            "variants": [
+                              7
+                            ]
+                          },
+                          {
+                            "material": 8,
+                            "variants": [
+                              8
+                            ]
+                          },
+                          {
+                            "material": 9,
+                            "variants": [
+                              9
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ],
+            "name": "LOD3spShape"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 12636,
+            "max": [
+                2398
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2399,
+            "max": [
+                0.9995989799499512,
+                0.999580979347229,
+                0.9984359741210938
+            ],
+            "min": [
+                -0.9990839958190918,
+                -1.0,
+                -0.9998319745063782
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 28788,
+            "componentType": 5126,
+            "count": 2399,
+            "max": [
+                96.17990112304688,
+                163.97000122070313,
+                53.92519760131836
+            ],
+            "min": [
+                -69.29850006103516,
+                9.929369926452637,
+                -61.32819747924805
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2399,
+            "max": [
+                0.9833459854125976,
+                0.9800369739532472
+            ],
+            "min": [
+                0.026409000158309938,
+                0.01996302604675293
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_001"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 1
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_002"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 2
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_003"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 3
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_004"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 4
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_005"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 5
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_006"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 6
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_007"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 7
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_008"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 8
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_009"
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 9
+                },
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "blinn3-fx_010"
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "sampler": 0,
+            "source": 2
+        },
+        {
+            "sampler": 0,
+            "source": 3
+        },
+        {
+            "sampler": 0,
+            "source": 4
+        },
+        {
+            "sampler": 0,
+            "source": 5
+        },
+        {
+            "sampler": 0,
+            "source": 6
+        },
+        {
+            "sampler": 0,
+            "source": 7
+        },
+        {
+            "sampler": 0,
+            "source": 8
+        },
+        {
+            "sampler": 0,
+            "source": 9
+        }
+    ],
+    "extensions": {
+      "KHR_materials_variants": {
+        "variants": [
+            {"name": "color_001" },
+            {"name": "color_002" },
+            {"name": "color_003" },
+            {"name": "color_004" },
+            {"name": "color_005" },
+            {"name": "color_006" },
+            {"name": "color_007" },
+            {"name": "color_008" },
+            {"name": "color_009" },
+            {"name": "color_010" }
+          ]
+      }
+    },
+    "extensionsUsed": [
+      "KHR_materials_variants"
+    ],
+    "images": [
+        {
+            "uri": "DuckCM_001.png"
+        },
+        {
+            "uri": "DuckCM_002.png"
+        },
+        {
+            "uri": "DuckCM_003.png"
+        },
+        {
+            "uri": "DuckCM_004.png"
+        },
+        {
+            "uri": "DuckCM_005.png"
+        },
+        {
+            "uri": "DuckCM_006.png"
+        },
+        {
+            "uri": "DuckCM_007.png"
+        },
+        {
+            "uri": "DuckCM_008.png"
+        },
+        {
+            "uri": "DuckCM_009.png"
+        },
+        {
+            "uri": "DuckCM_010.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9986,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 76768,
+            "byteLength": 25272,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 57576,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 57576,
+            "byteLength": 19192,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 102040,
+            "uri": "Duck0.bin"
+        }
+    ]
+}
