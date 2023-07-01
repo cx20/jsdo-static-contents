@@ -61,6 +61,7 @@
         var scene = null;
         var sceneToRender = null;
         var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+
 const SCALE = 1/50;
 const FRAME_RATE = 20;
 
@@ -167,7 +168,7 @@ const createScene = function () {
         hingeB_sweep.setKeys(hingeB_sweep_keys);
 
         scene.beginDirectAnimation(hingeL, [hingeL_sweep], 0, 25 * FRAME_RATE, false);
-        scene.beginDirectAnimation(hingeR, [hingeR_sweep], 0, 25 * FRAME_RATE, false);
+        scene.beginDirectAnimation(hingeR, [hingeR_sweep], 0, 25 * FRAME_RATE, false, 1, onAnimationEnd);
         scene.beginDirectAnimation(hingeF, [hingeF_sweep], 0, 25 * FRAME_RATE, false);
         scene.beginDirectAnimation(hingeB, [hingeB_sweep], 0, 25 * FRAME_RATE, false);
 
@@ -175,12 +176,35 @@ const createScene = function () {
         boxR.parent = box;
         boxF.parent = box;
         boxB.parent = box;
+
+        function onAnimationEnd() {
+            let cardboardBox = BABYLON.Mesh.MergeMeshes([
+                boxL,
+                boxR,
+                boxF,
+                boxB,
+                boxTopL,
+                boxTopR,
+                boxTopF,
+                boxTopB,
+                boxBottom
+            ])
+            cardboardBox.id = "cardboardBox";
+            cardboardBox.name = "cardboardBox";
+            
+            box.dispose();
+            hingeB.dispose();
+            hingeF.dispose();
+            hingeL.dispose();
+            hingeR.dispose();
+        }
     }
 
     addBox();
 
     return scene;
-};                window.initFunction = async function() {
+};
+                window.initFunction = async function() {
                     
                     
                     
