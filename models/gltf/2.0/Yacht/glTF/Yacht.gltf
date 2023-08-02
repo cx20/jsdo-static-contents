@@ -1,0 +1,614 @@
+{
+  "asset": {
+    "generator": "Babylon.js v6.14.1",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "Yacht_data.bin",
+      "byteLength": 14752
+    }
+  ],
+  "nodes": [
+    {
+      "name": "yacht",
+      "scale": [
+        1,
+        -1,
+        0.3199999928474426
+      ],
+      "mesh": 0,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "pole1",
+      "translation": [
+        -1,
+        3.299999952316284,
+        0
+      ],
+      "mesh": 1,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "pole2",
+      "translation": [
+        -1.7000000476837158,
+        3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0.9848077519147348,
+        0.17364818327960366
+      ],
+      "mesh": 2,
+      "scale": [
+        0.9999999995881268,
+        -0.9999999995881268,
+        1
+      ]
+    },
+    {
+      "name": "pole3",
+      "translation": [
+        0,
+        3.799999952316284,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0.9832549004606004,
+        -0.18223552689964825
+      ],
+      "mesh": 3,
+      "scale": [
+        0.9999999739820852,
+        -0.9999999739820852,
+        1
+      ]
+    },
+    {
+      "name": "mat1",
+      "translation": [
+        -1,
+        5,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.7071067811865475,
+        0.7071067811865476,
+        0
+      ],
+      "mesh": 4,
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "mat2",
+      "translation": [
+        -1,
+        6.5,
+        0
+      ],
+      "rotation": [
+        0.7071067811865475,
+        -4.3297804701086715e-17,
+        4.329780470108673e-17,
+        0.7071067811865476
+      ],
+      "mesh": 5,
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 3,
+            "NORMAL": 4
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 6,
+            "NORMAL": 7
+          },
+          "indices": 8,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10
+          },
+          "indices": 11,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13
+          },
+          "indices": 14,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 15,
+            "NORMAL": 16
+          },
+          "indices": 17,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 312,
+      "name": "position - yacht",
+      "byteStride": 12,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 312,
+      "byteOffset": 312,
+      "name": "normal - yacht",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 208,
+      "byteOffset": 624,
+      "name": "uv - yacht",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 240,
+      "byteOffset": 832,
+      "name": "Indices - yacht"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 1072,
+      "name": "position - pole1",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 2296,
+      "name": "normal - pole1",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 816,
+      "byteOffset": 3520,
+      "name": "uv - pole1",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1152,
+      "byteOffset": 4336,
+      "name": "Indices - pole1"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 5488,
+      "name": "position - pole2",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 6712,
+      "name": "normal - pole2",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 816,
+      "byteOffset": 7936,
+      "name": "uv - pole2",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1152,
+      "byteOffset": 8752,
+      "name": "Indices - pole2"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 9904,
+      "name": "position - pole3",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1224,
+      "byteOffset": 11128,
+      "name": "normal - pole3",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 816,
+      "byteOffset": 12352,
+      "name": "uv - pole3",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1152,
+      "byteOffset": 13168,
+      "name": "Indices - pole3"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 14320,
+      "name": "position - mat1",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 14392,
+      "name": "normal - mat1",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 14464,
+      "name": "uv - mat1",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 14512,
+      "name": "Indices - mat1"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 14536,
+      "name": "position - mat2",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72,
+      "byteOffset": 14608,
+      "name": "normal - mat2",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 48,
+      "byteOffset": 14680,
+      "name": "uv - mat2",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24,
+      "byteOffset": 14728,
+      "name": "Indices - mat2"
+    }
+  ],
+  "accessors": [
+    {
+      "name": "position - yacht",
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 26,
+      "type": "VEC3",
+      "min": [
+        -2.427050983124843,
+        -0.5,
+        -2.8531695488854605
+      ],
+      "max": [
+        3,
+        0.5,
+        2.853169548885461
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - yacht",
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 26,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - yacht",
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 60,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - pole1",
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "min": [
+        -0.05,
+        -3.3,
+        -0.05
+      ],
+      "max": [
+        0.05,
+        3.3,
+        0.05
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - pole1",
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - pole1",
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 288,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - pole2",
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "min": [
+        -0.025,
+        -2.15,
+        -0.025
+      ],
+      "max": [
+        0.025,
+        2.15,
+        0.025
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - pole2",
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - pole2",
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 288,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - pole3",
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "min": [
+        -0.025,
+        -2.8,
+        -0.025
+      ],
+      "max": [
+        0.025,
+        2.8,
+        0.025
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - pole3",
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 102,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - pole3",
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 288,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - mat1",
+      "bufferView": 16,
+      "componentType": 5126,
+      "count": 6,
+      "type": "VEC3",
+      "min": [
+        0,
+        0,
+        0
+      ],
+      "max": [
+        1.5,
+        0,
+        4
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - mat1",
+      "bufferView": 17,
+      "componentType": 5126,
+      "count": 6,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - mat1",
+      "bufferView": 19,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - mat2",
+      "bufferView": 20,
+      "componentType": 5126,
+      "count": 6,
+      "type": "VEC3",
+      "min": [
+        0,
+        0,
+        0
+      ],
+      "max": [
+        2,
+        0,
+        5.3
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - mat2",
+      "bufferView": 21,
+      "componentType": 5126,
+      "count": 6,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - mat2",
+      "bufferView": 23,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "byteOffset": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "materialWhite",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349
+      }
+    },
+    {
+      "name": "default material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349
+      }
+    }
+  ]
+}

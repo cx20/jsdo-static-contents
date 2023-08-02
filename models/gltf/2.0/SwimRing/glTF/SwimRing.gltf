@@ -1,0 +1,163 @@
+{
+  "asset": {
+    "generator": "Babylon.js v6.14.0",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "SwimRing_data.bin",
+      "byteLength": 60984
+    }
+  ],
+  "nodes": [
+    {
+      "name": "torus",
+      "mesh": 0,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 13068,
+      "name": "position - torus",
+      "byteStride": 12,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13068,
+      "byteOffset": 13068,
+      "name": "normal - torus",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8712,
+      "byteOffset": 26136,
+      "name": "uv - torus",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 26136,
+      "byteOffset": 34848,
+      "name": "Indices - torus"
+    }
+  ],
+  "accessors": [
+    {
+      "name": "position - torus",
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1089,
+      "type": "VEC3",
+      "min": [
+        -1.25,
+        -0.25,
+        -1.25
+      ],
+      "max": [
+        1.25,
+        0.25,
+        1.25
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - torus",
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1089,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "uv - torus",
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1089,
+      "type": "VEC2",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - torus",
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 6534,
+      "type": "SCALAR",
+      "byteOffset": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    }
+  ],
+  "samplers": [
+    {
+      "wrapS": 33071,
+      "wrapT": 33071,
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "images": [
+    {
+      "name": "dynamic texture image",
+      "uri": "SwimRing_img0.png"
+    }
+  ]
+}
