@@ -1,0 +1,163 @@
+{
+  "asset": {
+    "generator": "Babylon.js v6.14.1",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "BeachBall_data.bin",
+      "byteLength": 132768
+    }
+  ],
+  "nodes": [
+    {
+      "name": "sphere",
+      "mesh": 0,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 28980,
+      "name": "position - sphere",
+      "byteStride": 12,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28980,
+      "byteOffset": 28980,
+      "name": "normal - sphere",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19320,
+      "byteOffset": 57960,
+      "name": "uv - sphere",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 55488,
+      "byteOffset": 77280,
+      "name": "Indices - sphere"
+    }
+  ],
+  "accessors": [
+    {
+      "name": "position - sphere",
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 2415,
+      "type": "VEC3",
+      "min": [
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - sphere",
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2415,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "uv - sphere",
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2415,
+      "type": "VEC2",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - sphere",
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 13872,
+      "type": "SCALAR",
+      "byteOffset": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 0
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    }
+  ],
+  "samplers": [
+    {
+      "wrapS": 33071,
+      "wrapT": 33071,
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "images": [
+    {
+      "name": "dynamic texture image",
+      "uri": "BeachBall_img0.png"
+    }
+  ]
+}
