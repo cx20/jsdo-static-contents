@@ -1,0 +1,330 @@
+{
+  "asset": {
+    "generator": "Babylon.js v6.14.1",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "extensions": {},
+  "buffers": [
+    {
+      "uri": "StrawHat_data.bin",
+      "byteLength": 170496
+    }
+  ],
+  "nodes": [
+    {
+      "name": "hat",
+      "mesh": 0,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "hatTop",
+      "translation": [
+        0,
+        -2.0299999713897705,
+        0
+      ],
+      "mesh": 1,
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1
+      ]
+    }
+  ],
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3528,
+      "name": "position - hat",
+      "byteStride": 12,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3528,
+      "byteOffset": 3528,
+      "name": "normal - hat",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2352,
+      "byteOffset": 7056,
+      "name": "uv - hat",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4608,
+      "byteOffset": 9408,
+      "name": "Indices - hat"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34344,
+      "byteOffset": 14016,
+      "name": "position - hatTop",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34344,
+      "byteOffset": 48360,
+      "name": "normal - hatTop",
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteLength": 22896,
+      "byteOffset": 82704,
+      "name": "uv - hatTop",
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64896,
+      "byteOffset": 105600,
+      "name": "Indices - hatTop"
+    }
+  ],
+  "accessors": [
+    {
+      "name": "position - hat",
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 294,
+      "type": "VEC3",
+      "min": [
+        -5,
+        0,
+        -5
+      ],
+      "max": [
+        5,
+        2,
+        5
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - hat",
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 294,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "uv - hat",
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 294,
+      "type": "VEC2",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - hat",
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 1152,
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "name": "position - hatTop",
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 2862,
+      "type": "VEC3",
+      "min": [
+        -2.0177244544029236,
+        4.022286504507065,
+        -2.0177244544029236
+      ],
+      "max": [
+        2.0177244544029236,
+        4.5,
+        2.0177244544029236
+      ],
+      "byteOffset": 0
+    },
+    {
+      "name": "normal - hatTop",
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 2862,
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "name": "uv - hatTop",
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 2862,
+      "type": "VEC2",
+      "byteOffset": 0
+    },
+    {
+      "name": "indices - hatTop",
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 16224,
+      "type": "SCALAR",
+      "byteOffset": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "materialHat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "scale": [
+                10,
+                20
+              ]
+            }
+          }
+        }
+      },
+      "normalTexture": {
+        "index": 1,
+        "extensions": {
+          "KHR_texture_transform": {
+            "scale": [
+              10,
+              20
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "materialHatTop",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3288090062081349,
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "scale": [
+                20,
+                5
+              ]
+            }
+          }
+        }
+      },
+      "normalTexture": {
+        "index": 1,
+        "extensions": {
+          "KHR_texture_transform": {
+            "scale": [
+              20,
+              5
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "images": [
+    {
+      "name": "https:__cx20 image",
+      "uri": "StrawHat_img0.png"
+    },
+    {
+      "name": "https:__cx20 image",
+      "uri": "StrawHat_img1.png"
+    }
+  ]
+}
