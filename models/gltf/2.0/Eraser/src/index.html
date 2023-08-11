@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://cdn.babylonjs.com/recast.js"></script>
+        <script src="https://cdn.babylonjs.com/ammo.js"></script>
+        <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+        <script src="https://cdn.babylonjs.com/cannon.js"></script>
+        <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+        <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+            
+            #canvasZone {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+<body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+const SCALE = 1/50;
+
+const createScene = function () {
+    const scene = new BABYLON.Scene(engine);
+    const camera = new BABYLON.ArcRotateCamera("Camera", - Math.PI / 2, Math.PI / 2.5, 50, BABYLON.Vector3.Zero(), scene);
+
+    camera.setTarget(BABYLON.Vector3.Zero());
+    camera.attachControl(canvas, true);
+
+    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
+    light.intensity = 0.7;
+
+    addEraser(scene);
+
+    return scene;
+};
+
+
+function addEraser(scene) {
+    const matEraser = new BABYLON.StandardMaterial("matEraser");
+    const texBookTitle = new BABYLON.Texture("https://cx20.github.io/webgl-physics-examples/assets/textures/eraser_001/eraser.png");
+    matEraser.diffuseTexture = texBookTitle;
+
+    // https://doc.babylonjs.com/features/featuresDeepDive/materials/using/texturePerBoxFace
+    const faceUV = new Array(6);
+
+    //set all faces
+    //     V
+    //     ^
+    //     |
+    // 1   +---------+---------+---------+---------+
+    //     |         |         |         |         |
+    //     |faceUV[3]|faceUV[2]|faceUV[5]|         |
+    //     | (left)  | (right) |(bottom) |         |
+    // 0.5 +---------+---------+---------+---------+
+    //     |         |         |         |         |
+    //     |faceUV[4]|faceUV[1]|faceUV[0]|         |
+    //     |  (top)  | (front) | (back)  |         |
+    //     +---------+---------+---------+---------+-->U
+    // 0            1/4       2/4        3/4       1
+    //
+    faceUV[0] = new BABYLON.Vector4(3/4, 0.0, 2/4, 0.5);   // back
+    faceUV[1] = new BABYLON.Vector4(1/4, 0.0, 2/4, 0.5);   // front
+    faceUV[2] = new BABYLON.Vector4(1/4, 0.5, 2/4, 1.0);   // right
+    faceUV[3] = new BABYLON.Vector4(0.0, 0.5, 1/4, 1.0);   // left
+    faceUV[4] = new BABYLON.Vector4(0.0, 0.0, 1/4, 0.5);   // top
+    faceUV[5] = new BABYLON.Vector4(2/4, 0.5, 3/4, 1.0);   // bottom
+    
+    //wrap set
+    const options = {
+        faceUV: faceUV,
+        wrap: true,
+        width: 50 * SCALE, 
+        height: 10 * SCALE, 
+        depth: 25 * SCALE
+    };
+    
+    const eraser = BABYLON.MeshBuilder.CreateBox("eraser", options);
+
+    eraser.material = matEraser;
+
+}
+
+                window.initFunction = async function() {
+                    
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
