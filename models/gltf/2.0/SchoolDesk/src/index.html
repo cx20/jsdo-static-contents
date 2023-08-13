@@ -71,7 +71,7 @@ const createScene = function () {
     camera.attachControl(canvas, true);
 
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
-    light.intensity = 0.7;
+    light.intensity = 1;
 
     addDesk(scene);
 
@@ -83,7 +83,7 @@ function addDesk(scene) {
     const material_desk_top = new BABYLON.StandardMaterial("material_desk_top", scene);
 
     let desk = BABYLON.MeshBuilder.CreateBox("desk", {size:0.01});
-    let desk_top = BABYLON.MeshBuilder.CreateBox("desk_top", {height: 20*SCALE, width: 600*SCALE, depth: 450*SCALE}, scene); 
+    let desk_top = BABYLON.MeshBuilder.CreateBox("desk_top", {height: 20*SCALE, width: 650*SCALE, depth: 450*SCALE}, scene); 
     desk_top.material = material_desk_top;
     desk_top.parent = desk;
     desk.position.y = 700 * SCALE;
@@ -96,34 +96,34 @@ function addDesk(scene) {
     let desk_bar_bottom_1to2 = BABYLON.MeshBuilder.CreateBox("desk_bar_bottom_1to2", {height: 10*SCALE, width: 15*SCALE, depth: 350*SCALE}, scene); 
     let desk_bar_bottom_3to4 = BABYLON.MeshBuilder.CreateBox("desk_bar_bottom_3to4", {height: 10*SCALE, width: 15*SCALE, depth: 350*SCALE}, scene); 
 
-    let desk_bar_top_1to3 = BABYLON.MeshBuilder.CreateBox("desk_bar_top_1to3", {height: 10*SCALE, width: (600-100)*SCALE, depth: 10*SCALE}, scene); 
+    let desk_bar_top_1to3 = BABYLON.MeshBuilder.CreateBox("desk_bar_top_1to3", {height: 10*SCALE, width: (650-100)*SCALE, depth: 10*SCALE}, scene); 
 
-    desk_leg1.position.x = -600*SCALE / 2 +  50*SCALE;
+    desk_leg1.position.x = -650*SCALE / 2 +  50*SCALE;
     desk_leg1.position.z = -450*SCALE / 2 +  50*SCALE;
     desk_leg1.position.y = -700*SCALE / 2;
     desk_leg1.parent = desk;
 
-    desk_leg2.position.x = -600*SCALE / 2 +  50*SCALE;
+    desk_leg2.position.x = -650*SCALE / 2 +  50*SCALE;
     desk_leg2.position.z =  450*SCALE / 2 -  50*SCALE;
     desk_leg2.position.y = -700*SCALE / 2;
     desk_leg2.parent = desk;
 
-    desk_leg3.position.x =  600*SCALE / 2 -  50*SCALE;
+    desk_leg3.position.x =  650*SCALE / 2 -  50*SCALE;
     desk_leg3.position.z = -450*SCALE / 2 +  50*SCALE;
     desk_leg3.position.y = -700*SCALE / 2;
     desk_leg3.parent = desk;
 
-    desk_leg4.position.x = 600*SCALE / 2 -  50*SCALE;
+    desk_leg4.position.x = 650*SCALE / 2 -  50*SCALE;
     desk_leg4.position.z = 450*SCALE / 2 -  50*SCALE;
     desk_leg4.position.y = -700*SCALE / 2;
     desk_leg4.parent = desk;
 
-    desk_bar_bottom_1to2.position.x = -600*SCALE / 2 + 50*SCALE;
+    desk_bar_bottom_1to2.position.x = -650*SCALE / 2 + 50*SCALE;
     desk_bar_bottom_1to2.position.y =  100*SCALE;
-    desk_bar_bottom_3to4.position.x =  600*SCALE / 2 - 50*SCALE;
+    desk_bar_bottom_3to4.position.x =  650*SCALE / 2 - 50*SCALE;
     desk_bar_bottom_3to4.position.y =  100*SCALE;
 
-    desk_bar_top_1to3.position.y =  600*SCALE;
+    desk_bar_top_1to3.position.y =  650*SCALE;
     desk_bar_top_1to3.position.z =  450*SCALE/2 - 50*SCALE;
 
     const dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", 512, scene, true);

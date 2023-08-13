@@ -1,6 +1,6 @@
 {
   "asset": {
-    "generator": "Babylon.js v6.15.0",
+    "generator": "Babylon.js v6.16.0",
     "version": "2.0"
   },
   "buffers": [
@@ -44,7 +44,7 @@
     {
       "name": "desk_leg1",
       "translation": [
-        -5,
+        -5.5,
         -7,
         -3.5
       ],
@@ -53,7 +53,7 @@
     {
       "name": "desk_leg2",
       "translation": [
-        -5,
+        -5.5,
         -7,
         3.5
       ],
@@ -62,7 +62,7 @@
     {
       "name": "desk_leg3",
       "translation": [
-        5,
+        5.5,
         -7,
         -3.5
       ],
@@ -71,7 +71,7 @@
     {
       "name": "desk_leg4",
       "translation": [
-        5,
+        5.5,
         -7,
         3.5
       ],
@@ -80,7 +80,7 @@
     {
       "name": "desk_bar_bottom_1to2",
       "translation": [
-        5,
+        5.5,
         2,
         0
       ],
@@ -100,7 +100,7 @@
     {
       "name": "desk_bar_bottom_3to4",
       "translation": [
-        -5,
+        -5.5,
         2,
         0
       ],
@@ -121,7 +121,7 @@
       "name": "desk_bar_top_1to3",
       "translation": [
         0,
-        12,
+        13,
         3.5
       ],
       "mesh": 8,
@@ -547,12 +547,12 @@
       "count": 24,
       "type": "VEC3",
       "min": [
-        -6,
+        -6.5,
         -0.2,
         -4.5
       ],
       "max": [
-        6,
+        6.5,
         0.2,
         4.5
       ],
@@ -793,12 +793,12 @@
       "count": 24,
       "type": "VEC3",
       "min": [
-        -5,
+        -5.5,
         -0.1,
         -0.1
       ],
       "max": [
-        5,
+        5.5,
         0.1,
         0.1
       ],
