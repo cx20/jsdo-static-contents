@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://cdn.babylonjs.com/recast.js"></script>
+        <script src="https://cdn.babylonjs.com/ammo.js"></script>
+        <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+        <script src="https://cdn.babylonjs.com/cannon.js"></script>
+        <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+        <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+            
+            #canvasZone {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+<body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+
+const BASE_URL = "https://cx20.github.io/gltf-test";
+
+const createScene = function () {
+    const scene = new BABYLON.Scene(engine);
+    const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2, -100, BABYLON.Vector3.Zero(), scene);
+    camera.attachControl(canvas, true);
+
+    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
+
+    const sunflower = createSunflower(scene);
+    sunflower.rotation.x = Math.PI / 2;
+
+    return scene;
+};
+
+function createSunflower(scene) {
+    const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+    const petalMaterial = new BABYLON.StandardMaterial("petalMaterial", scene);
+    petalMaterial.diffuseColor = new BABYLON.Color3(180/255, 120/255, 26/255);
+    petalMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+    const sunflower = new BABYLON.TransformNode("sunflower", scene);
+    const sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {slice: 0.1, diameter: 100, sideOrientation: BABYLON.Mesh.DOUBLESIDE});
+    sphere.parent = sunflower;
+
+    sphere.rotation.x = Math.PI;
+    sphere.position.y += 45;
+    const sphereBackMaterial = new BABYLON.StandardMaterial("sphereBackMaterial", scene);
+    sphereBackMaterial.diffuseColor = new BABYLON.Color3(136/255, 149/255, 74/255);
+    sphereBackMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+    sphere.material = sphereBackMaterial;
+
+    const mesh = BABYLON.MeshBuilder.CreateCylinder("cylinder", {tessellation: 8, height: 1, diameterBottom : 1, diameterTop: 0.01});
+    mesh.material = petalMaterial;
+    for (let i = 0; i < 1000; i++) {
+        const radius = 0.5 * Math.sqrt(i);
+        const angle = goldenAngle * i;
+        const x = radius * Math.cos(angle);
+        const z = radius * Math.sin(angle);
+
+        const petal = mesh.createInstance(`petal_${i}`);
+        petal.parent = sunflower;
+
+        petal.position.x = x;
+        petal.position.z = z;
+        petal.position.y = 0.2 * Math.sin(i * 0.1);
+        petal.lookAt( BABYLON.Vector3.Zero());
+    }
+    mesh.isVisible = false;
+    mesh.scaling = new BABYLON.Vector3(0.01, 0.01, 0.01);
+
+    const tongueMaterial = new BABYLON.StandardMaterial("tongueMaterial", scene);
+    tongueMaterial.diffuseColor = new BABYLON.Color3(1, 1, 0.1);
+    tongueMaterial.diffuseTexture = new BABYLON.Texture("ground.jpg");
+    tongueMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 24; j++) {
+            const angle = (2 * Math.PI / 24 + (Math.PI / 48*i) ) * j;
+            const x = (20+i/4) * Math.cos(angle);
+            const z = (20+i/4) * Math.sin(angle);
+            const tongue = BABYLON.MeshBuilder.CreateCylinder("tongue", { height: 0.1, diameter: 10 }, scene);
+            tongue.parent = sunflower;
+
+            tongue.scaling = new BABYLON.Vector3(2, 0.5, 0.5);
+
+            tongue.position.x = x;
+            tongue.position.y = i/2 - 1;
+            tongue.position.z = z;
+            tongue.rotation.z = Math.PI * (i*10) / 180;
+            tongue.rotation.y = -angle;
+            tongue.material = tongueMaterial;
+        }
+    }
+
+    return sunflower;
+    
+}                window.initFunction = async function() {
+                    
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
